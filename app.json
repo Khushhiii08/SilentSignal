@@ -1,29 +1,21 @@
 {
   "expo": {
     "name": "SilentSignal",
-    "slug": "SilentSignal",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "ios": {
-      "supportsTablet": true
+      "infoPlist": {
+        "NSHealthShareUsageDescription": "SilentSignal uses your heart rate to validate distress signals and reduce false alarms.",
+        "NSHealthUpdateUsageDescription": "SilentSignal monitors vitals to ensure user safety."
+      },
+      "bundleIdentifier": "com.anonymous.silentsignal"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
+      "permissions": [
+        "android.permission.BODY_SENSORS",
+        "android.permission.health.READ_HEART_RATE",
+        "android.permission.BODY_SENSORS",
+        "android.permission.health.READ_HEART_RATE"
+      ],
+      "package": "com.anonymous.silentsignal"
     }
   }
 }
